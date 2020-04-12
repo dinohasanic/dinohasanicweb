@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Dino Hasanic | Full-Stack Developer`,
     description: `Hi, I'm Dino, a full-stack developer based in the SF Bay Area. `,
-    author: `Dino Hasanic`,
+    author: `@dinohasanic`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
