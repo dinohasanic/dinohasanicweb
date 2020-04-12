@@ -1,4 +1,5 @@
 import React from "react"
+import PdfResumeFileButton from "../../components/pdfResumeButton"
 
 const IntroSection = () => (
   <section style={{
@@ -10,7 +11,7 @@ const IntroSection = () => (
     <h3 className="header-intro">
       I’m a <strong>full-stack developer</strong> based in the <strong>SF Bay Area</strong>. Using React (and React Native) with a Node.js/GraphQL API backend, I build web and mobile apps. I’m also interested in creating VR/AR experiences — I think that’s where the future is going!
     </h3>
-    <button className="main-button">View my resume</button>
+    <PdfResumeFileButton />
   </section>
 )
 
