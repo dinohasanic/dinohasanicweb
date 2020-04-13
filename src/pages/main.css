@@ -101,19 +101,56 @@
   min-height: 431px;
   background: #004AB8;
   border-radius: 5px;
+  z-index: 4;
 }
 
 .journey-section {
-  display: flex;
-  justify-content: center;
-  min-height: 500px;
-  background-color: #FFFFFF;
+  position: relative;
+  width: 100%;
+  min-height: 45vw;
+  overflow: hidden;
   margin-top: -100px;
-  padding: 100px 0px;
 }
 
 .journey-container {
-  max-width: 570px;
+  position: absolute;
+  width: 100vw;
+  min-height: 45vw;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.journey-container .content-container {
+  position: absolute;
+  width: 100vw;
+  min-height: 45vw;
+  display: flex;
+  justify-content: center;
+}
+.content {
+  max-width: 545px;
+  padding: 50px 20px;
+}
+
+.bottom {
+  background-color:#101010;
+  z-index: 1;
+}
+
+.top {
+  background-color:#FFFFFF;
+  z-index: 2;
+  width: 75vw;
+}
+.handle {
+  height: 100%;
+  position: absolute;
+  display: block;
+  background-color: #D9D9D9;
+  width: 5px;
+  top: 0;
+  left: 75%;
+  z-index: 3;
 }
 
 .main-text {
@@ -123,6 +160,10 @@
   line-height: 145%;
   text-align: center;
   color: #101010;
+}
+
+.text-white {
+  color: #FFFFFF;
 }
 
 .divider {
