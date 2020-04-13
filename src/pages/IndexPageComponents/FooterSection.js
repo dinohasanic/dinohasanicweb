@@ -12,9 +12,9 @@ const FoooterSection = () => (
       <div className="contact-section-left">
         <h3>Tell me about your...</h3>
         <h4>Full-time role/opportunity</h4>
-        <p>I’m a full-stack developer based in the SF Bay Area. Using React (and React Native) with a Node.js/GraphQL API backend.</p>
-        <h4>Project</h4>
-        <p>I’m a full-stack developer based in the SF Bay Area. Using React (and React Native) with a Node.js/GraphQL API backend.</p>
+        <p>Are you hiring? I'm currently looking for full-time positions based in the Bay Area, or remotely anywhere else.</p>
+        <h4>Freelance Project</h4>
+        <p>Please feel free to contact me regarding any freelance projects you might have, I would like to help.</p>
       </div>
       <div className="contact-section-right">
         <Image className="footer-image" />

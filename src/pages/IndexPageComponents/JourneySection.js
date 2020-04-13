@@ -1,12 +1,43 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect, useState } from "react"
 import Divider from "../../components/divider"
+import { isMobile } from "react-device-detect";
 
 const JourneySection = () => {
+  const [dragPosition, setDragPosition] = useState(0);
   const sectionEl = useRef(null);
   const topPanelEl = useRef(null);
   const handleEl = useRef(null);
   const contentEl = useRef(null);
   const bottomPanelEl = useRef(null);
+
+  const onDragHandle = (e) => {
+    var parent = sectionEl.current,
+      topPanel = topPanelEl.current,
+      handle = handleEl.current;
+
+    setDragPosition(e.touches[0].clientX)
+
+    let maxWidth = parent.offsetWidth;
+    let dragLength = e.touches[0].clientX - dragPosition;
+    let currentHandlePos = handle.offsetLeft;
+    let delta = (e.touches[0].clientX - window.innerWidth / 2) * 0.2;
+
+    const calcHorizontalPos = () => {
+      if(currentHandlePos < 0) {
+        return 0 + "px";
+      } else if(currentHandlePos > maxWidth) {
+        return maxWidth + "px";
+      } else {
+        return currentHandlePos + dragLength + delta + "px";
+      }
+    }
+
+      // Move the handle.
+    handle.style.left = calcHorizontalPos();
+
+    // Adjust the top panel width.
+    topPanel.style.width = calcHorizontalPos();
+  }
 
   useEffect(() => {
     if (!!sectionEl.current) {
@@ -22,14 +53,15 @@ const JourneySection = () => {
       topPanel.style.height = 100 + contentEl.current.offsetHeight + "px";
     }
     function handleMouseMoveEvent(event) {
-      // Get the delta between the mouse position and center point.
-      delta = (event.clientX - window.innerWidth / 2) * 0.5;
+      if (!isMobile) {
+        // Get the delta between the mouse position and center point.
+        delta = (event.clientX - window.innerWidth / 2) * 0.5;
+        // Move the handle.
+        handle.style.left = event.clientX + delta + 'px';
 
-      // Move the handle.
-      handle.style.left = event.clientX + delta + 'px';
-
-      // Adjust the top panel width.
-      topPanel.style.width = event.clientX + delta + 'px';
+        // Adjust the top panel width.
+        topPanel.style.width = event.clientX + delta + 'px';
+      }
     }
 
     parent.addEventListener('mousemove', handleMouseMoveEvent)
@@ -38,7 +70,7 @@ const JourneySection = () => {
     }
   }, [sectionEl])
   return (
-    <section className="journey-section" ref={sectionEl}>
+    <section className="journey-section" ref={sectionEl} onTouchMove={e => onDragHandle(e)} onTouchStart={e => setDragPosition(e.touches[0].clientX)}>
       <div className="journey-container bottom" ref={bottomPanelEl}>
         <div className="content-container">
           <div className="content" ref={contentEl}>
@@ -78,7 +110,6 @@ const JourneySection = () => {
           </div>
         </div>
       </div>
-
       <div className="handle" ref={handleEl}></div>
     </section>
   )
