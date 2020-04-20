@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "../../components/image"
+import FooterImage from "../../components/footerImage"
 import MainLinks from "../../components/mainLinks"
 
 const FoooterSection = () => (
@@ -17,7 +17,7 @@ const FoooterSection = () => (
         <p>Please feel free to contact me regarding any freelance projects you might have, I would like to help.</p>
       </div>
       <div className="contact-section-right">
-        <Image className="footer-image" />
+        <FooterImage />
       </div>
     </div>
     <MainLinks emailContainerDisplayed={true} />

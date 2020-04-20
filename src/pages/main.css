@@ -3,7 +3,7 @@
   max-width: 960px;
   padding-top: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .email-link-container {
@@ -19,17 +19,28 @@
 .main-link {
   font-weight: bold;
   font-size: 16px;
-  margin: 0px 16px;
+  margin: 0px 10px;
   line-height: 145%;
   text-align: right;
   color: #FFFFFF;
   text-decoration: none;
+  padding: 5px 10px;
+  transition: 0.2s;
+}
+
+.main-link:hover {
+  background-color: #004AB8;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 .intro-section {
   margin: 0 auto;
   max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  padding: 5rem 1.0875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-header {
@@ -59,6 +70,7 @@
   font-size: 18px;
   line-height: 145%;
   color: #FFFFFF;
+  text-align: center;
 }
 
 .main-button {
@@ -101,67 +113,67 @@
   flex-wrap: wrap;
 }
 
+.cards-container:last-child {
+  margin-bottom: 4rem;
+}
+
 .card {
-  flex: 1 1 300px;
+  flex: 1 1 400px;
+  max-width: 580px;
   margin: 16px;
   min-height: 431px;
   background: #004AB8;
   border-radius: 5px;
   z-index: 4;
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.card-title {
+  font-size: 22px;
+  line-height: 145%;
+  color: #FFFFFF;
+}
+
+.card-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 145%;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.card-link {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 145%;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+  margin-top: 1.45rem;
+}
+
+.card-link:not(:first-child) {
+  margin-left: 40px;
 }
 
 .journey-section {
-  position: relative;
-  width: 100%;
-  min-height: 45vw;
-  overflow: hidden;
-  margin-top: -100px;
-}
-
-.journey-container {
-  position: absolute;
-  width: 100vw;
-  min-height: 45vw;
-  overflow: hidden;
-  padding: 100px 0;
-}
-
-.journey-container .content-container {
-  position: absolute;
-  width: 100vw;
-  min-height: 45vw;
+  margin: 0 auto;
+  padding: 5rem 1.0875rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
 }
 .content {
   max-width: 545px;
-  padding: 50px 20px;
-}
-
-.bottom {
-  background-color:#101010;
-  z-index: 1;
-}
-
-.top {
-  background-color:#FFFFFF;
-  z-index: 2;
-  width: 75vw;
-}
-.handle {
-  height: 100%;
-  position: absolute;
-  display: block;
-  background-color: #D9D9D9;
-  width: 5px;
-  top: 0;
-  left: 75%;
-  z-index: 3;
 }
 
 .main-text {
   font-weight: normal;
-  margin: 4rem 0;
+  margin-bottom: 4rem;
   font-size: 18px;
   line-height: 145%;
   text-align: center;
@@ -172,18 +184,13 @@
   color: #FFFFFF;
 }
 
-.divider {
+.year-divider {
   display: flex;
   justify-content: center;
-}
-
-.divider-dot {
-  width: 4px;
-  height: 4px;
-  background: #C4C4C4;
-  border-radius: 2px;
-  margin: 0 2px;
-  opacity: 0.6;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  line-height: 145%;
+  color: #C8C8C8;
 }
 
 .contact-section-container {
@@ -246,14 +253,6 @@
 }
 
 @media screen and (max-width: 773px) {
-  .intro-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .header-intro {
-    text-align: center;
-  }
   .contact-section-container {
     justify-content: center;
     text-align: center;
@@ -263,6 +262,9 @@
   }
   .contact-section-right {
     display: none;
+  }
+  .contact-section-left h3 {
+    font-size: 36px;
   }
   .main-links {
     flex-direction: column;

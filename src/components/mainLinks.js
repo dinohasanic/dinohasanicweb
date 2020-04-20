@@ -1,9 +1,9 @@
 import React, { useState } from "react"
-import Notifications, {notify} from 'react-notify-toast';
+import Notifications, { notify } from 'react-notify-toast';
 
 const MainLinks = (props) => {
   const [isEmailContainerDisplayed] = useState(props.emailContainerDisplayed);
-  
+
   const clickToCopyEmail = (e) => {
     e.preventDefault();
     var textarea = document.createElement('textarea');
@@ -24,14 +24,14 @@ const MainLinks = (props) => {
   return (
     <div className="main-links">
       {isEmailContainerDisplayed ? (
-        <div className="email-link-container">
-          <h2 className="email-link">dinohasanic@gmail.com</h2>
-          <button className="secondary-button" style={{ marginLeft: "1rem" }} onClick={clickToCopyEmail}>Copy</button>
-        </div>
-      ) : (
-        <div className="email-link-container"></div>
-        )}
-      <Notifications />
+        <>
+          <div className="email-link-container" style={{ flex: 1 }}>
+            <h2 className="email-link">dinohasanic@gmail.com</h2>
+            <button className="secondary-button" style={{ marginLeft: "1rem" }} onClick={clickToCopyEmail}>Copy</button>
+          </div>
+          <Notifications />
+        </>
+      ) : null}
       <div className="main-link-container">
         <a className="main-link" href="https://www.github.com/dinohasanic" target="_blank" rel="noopener noreferrer">Github</a>
         <a className="main-link" href="https://www.linkedin.com/in/dinohasanic/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
