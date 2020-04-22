@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "dinohasanic.com",
   "private": true,
   "description": "Dino Hasanic | Personal portfolio website",
   "version": "0.1.0",
@@ -30,7 +30,10 @@
     "prettier": "^1.19.1"
   },
   "keywords": [
-    "gatsby"
+    "dinohasanic.com",
+    "Dino",
+    "Hasanic",
+    "Dino Hasanic"
   ],
   "license": "MIT",
   "scripts": {
@@ -40,12 +43,5 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
