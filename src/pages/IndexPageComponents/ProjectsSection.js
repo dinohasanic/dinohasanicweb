@@ -9,46 +9,22 @@ const ProjectsSection = () => (
   }}>
     <div className="cards-container">
       <div className="card">
-        <ProjectImages />
+        <ProjectImages projectName="thriveMotors" />
         <div className="card-body">
-          <h3 className="card-title">Amigos DMS</h3>
-          <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+          <h3 className="card-title">Thrive Motors</h3>
+          <p className="card-text">A Single Page Application built with React and Apollo. Hasura/GraphQL backend deployed to Heroku. Front end static hosting on S3, with a CloudFront distribution.</p>
           <div className="card-links">
-            <a className="card-link" href="https://www.amigosdms.com" target="_blank" rel="noopener noreferrer">View website</a>
-            <a className="card-link" href="https://www.github.com/dinohasanic" target="_blank" rel="noopener noreferrer">View on Github</a>
+            <a className="card-link" href="https://www.thrivemotors.com" target="_blank" rel="noopener noreferrer">Website</a>
           </div>
         </div>
       </div>
       <div className="card">
-        <ProjectImages />
+        <ProjectImages projectName="amigosDMS" />
         <div className="card-body">
           <h3 className="card-title">Amigos DMS</h3>
-          <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+          <p className="card-text">CRM, inventory and invoice management web app built with Meteor.js, using Blaze to run our UI layer and MongoDB for data storage. Docker image deployed to AWS EC2.</p>
           <div className="card-links">
-            <a className="card-link" href="https://www.amigosdms.com" target="_blank" rel="noopener noreferrer">View website</a>
-            <a className="card-link" href="https://www.github.com/dinohasanic" target="_blank" rel="noopener noreferrer">View on Github</a>
-          </div>
-        </div>
-      </div>
-      <div className="card">
-        <ProjectImages />
-        <div className="card-body">
-          <h3 className="card-title">Amigos DMS</h3>
-          <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-          <div className="card-links">
-            <a className="card-link" href="https://www.amigosdms.com" target="_blank" rel="noopener noreferrer">View website</a>
-            <a className="card-link" href="https://www.github.com/dinohasanic" target="_blank" rel="noopener noreferrer">View on Github</a>
-          </div>
-        </div>
-      </div>
-      <div className="card">
-        <ProjectImages />
-        <div className="card-body">
-          <h3 className="card-title">Amigos DMS</h3>
-          <p className="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-          <div className="card-links">
-            <a className="card-link" href="https://www.amigosdms.com" target="_blank" rel="noopener noreferrer">View website</a>
-            <a className="card-link" href="https://www.github.com/dinohasanic" target="_blank" rel="noopener noreferrer">View on Github</a>
+            <a className="card-link" href="https://www.amigosdms.com" target="_blank" rel="noopener noreferrer">Website</a>
           </div>
         </div>
       </div>
