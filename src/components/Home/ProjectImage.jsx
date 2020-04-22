@@ -1,6 +1,7 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,7 +14,7 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const ProjectImages = props => {
+const ProjectImage = ({ projectName }) => {
   const data = useStaticQuery(graphql`
     query {
       amigosDMS: file(relativePath: { eq: "projects/amigosDMS.jpg" }) {
@@ -31,9 +32,13 @@ const ProjectImages = props => {
         }
       }
     }
-  `)
+  `);
 
-  return <Img fluid={data[props.projectName].childImageSharp.fluid} />
-}
+  return <Img fluid={data[projectName].childImageSharp.fluid} />;
+};
 
-export default ProjectImages
+ProjectImage.propTypes = {
+  projectName: PropTypes.string.isRequired,
+};
+
+export default ProjectImage;

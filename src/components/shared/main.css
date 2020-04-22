@@ -8,6 +8,7 @@
 
 .email-link-container {
   display: flex;
+  flex: 1;
   align-items: center;
 }
 
@@ -34,10 +35,13 @@
   padding: 5px 10px;
 }
 
-.intro-section {
+.section {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1260px;
   padding: 5rem 1.0875rem;
+}
+
+.intro-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,6 +66,8 @@
   text-align: center;
   letter-spacing: -0.04em;
   color: #101010;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .header-intro {
@@ -101,6 +107,7 @@
   line-height: 145%;
   color: #FFFFFF;
   cursor: pointer;
+  margin-left: 1rem;
 }
 
 .secondary-button:hover {
@@ -167,6 +174,7 @@
   align-items: center;
   background-color: #FFFFFF;
 }
+
 .content {
   max-width: 545px;
 }
