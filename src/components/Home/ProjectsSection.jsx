@@ -16,6 +16,16 @@ const ProjectsSection = () => (
         </div>
       </div>
       <div className="card">
+        <ProjectImage projectName="solo" />
+        <div className="card-body">
+          <h3 className="card-title">Solo</h3>
+          <p className="card-text">Minimalist note taking and distraction-free writing web app built with React. Apollo handles state and data management. Hasura + PostgreSQL + GraphQL handles basic CRUD.</p>
+          <div className="card-links">
+            <a className="card-link" href="https://www.writesolo.com" target="_blank" rel="noopener noreferrer">Website</a>
+          </div>
+        </div>
+      </div>
+      <div className="card">
         <ProjectImage projectName="amigosDMS" />
         <div className="card-body">
           <h3 className="card-title">Amigos DMS</h3>

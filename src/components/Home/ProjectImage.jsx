@@ -31,6 +31,13 @@ const ProjectImage = ({ projectName }) => {
           }
         }
       }
+      solo: file(relativePath: { eq: "projects/solo.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 950, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `);
 
