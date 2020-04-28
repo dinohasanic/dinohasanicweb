@@ -18,6 +18,9 @@
 }
 
 .main-link {
+  outline: 0;
+  border: 0;
+  background: 0;
   font-weight: bold;
   font-size: 16px;
   margin: 0px 10px;
@@ -164,6 +167,12 @@
 
 .card-link:not(:first-child) {
   margin-left: 40px;
+}
+
+.this-project-source {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 16px 0px;
 }
 
 .journey-section {

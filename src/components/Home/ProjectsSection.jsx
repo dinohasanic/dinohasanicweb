@@ -1,40 +1,55 @@
 import React from 'react';
 
+import projectsData from '../helpers/projectsData';
 import ProjectImage from './ProjectImage';
+
+const THIS_PROJECT_GITHUB_URL = 'https://github.com/dinohasanic/dinohasanicweb';
 
 const ProjectsSection = () => (
   <section className="section">
     <div className="cards-container">
-      <div className="card">
-        <ProjectImage projectName="thriveMotors" />
-        <div className="card-body">
-          <h3 className="card-title">Thrive Motors</h3>
-          <p className="card-text">A Single Page Application built with React and Apollo. Hasura/GraphQL backend deployed to Heroku. Front end static hosting on S3, with a CloudFront distribution.</p>
-          <div className="card-links">
-            <a className="card-link" href="https://www.thrivemotors.com" target="_blank" rel="noopener noreferrer">Website</a>
+      {projectsData
+        && projectsData.map((project) => (
+          <div key={project.projectName} className="card">
+            <ProjectImage projectName={project.projectName} />
+            <div className="card-body">
+              <h3 className="card-title">{project.title}</h3>
+              <p className="card-text">{project.description}</p>
+              <div className="card-links">
+                {project.links.map((link) => (
+                  <a
+                    key={link.url}
+                    className="card-link"
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.urlName}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div className="card">
-        <ProjectImage projectName="solo" />
-        <div className="card-body">
-          <h3 className="card-title">Solo</h3>
-          <p className="card-text">Minimalist note taking and distraction-free writing web app built with React. Apollo handles state and data management. Hasura + PostgreSQL + GraphQL handles basic CRUD.</p>
-          <div className="card-links">
-            <a className="card-link" href="https://www.writesolo.com" target="_blank" rel="noopener noreferrer">Website</a>
-          </div>
-        </div>
-      </div>
-      <div className="card">
-        <ProjectImage projectName="amigosDMS" />
-        <div className="card-body">
-          <h3 className="card-title">Amigos DMS</h3>
-          <p className="card-text">CRM, inventory and invoice management web app built with Meteor.js, using Blaze to run our UI layer and MongoDB for data storage. Docker image deployed to AWS EC2.</p>
-          <div className="card-links">
-            <a className="card-link" href="https://www.amigosdms.com" target="_blank" rel="noopener noreferrer">Website</a>
-          </div>
-        </div>
-      </div>
+        ))}
+    </div>
+    <div className="this-project-source">
+      <h3 className="card-title">This website</h3>
+      <h4 className="card-text">
+        I built the current version of this website with GatsbyJS in April 2020.
+        <br />
+        I open sourced the code on
+        {' '}
+        <a
+          className="text-white"
+          href={THIS_PROJECT_GITHUB_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <strong>GitHub</strong>
+        </a>
+        {' '}
+        so feel free to check it out.
+      </h4>
     </div>
   </section>
 );

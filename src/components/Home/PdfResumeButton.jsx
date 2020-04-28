@@ -11,7 +11,7 @@ const PdfResumeFileButton = () => {
   `);
 
   return (
-    <a className="main-button" href={data.pdfFile.publicURL} target="_blank" rel="noopener noreferrer">View my resume</a>
+    <a className="main-button" href={data.pdfFile.publicURL} data-cy="resumeLink" target="_blank" rel="noopener noreferrer">View my resume</a>
   );
 };
 
